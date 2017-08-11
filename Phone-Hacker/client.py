@@ -35,9 +35,6 @@ def mandaArq(s,bits):
             break
         f.write(bits)
 
-     
-
-
 def connect():
     ip = "127.0.0.1"
     port = 4222
