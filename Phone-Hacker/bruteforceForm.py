@@ -10,7 +10,7 @@ print('\n Input Username: uname')
 print('\n Input Pass: pass')
 user_thread = 10
 username = raw_input("[+]Username: ")
-target_url = raw_input("[+]Site Page Login: ")
+target_url = 'http://'+raw_input("[+]Site Page Login: ")
 wordlist= raw_input("[+]Wordlist: ")
 username_field = raw_input("[+]Input Username: ")
 password_file = raw_input("[+]Input Pass: ")

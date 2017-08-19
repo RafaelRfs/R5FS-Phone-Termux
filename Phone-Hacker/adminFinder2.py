@@ -64,9 +64,3 @@ try:
         t.start()
 except:
     print('[-]Erro ao abrir o site ou wordlist ')
-    
-
-
-
-    
-

