@@ -23,6 +23,11 @@ sudo cat ngrok > /data/data/com.termux/files/usr/bin/ngrok
 sudo chmod 777 /data/data/com.termux/files/usr/bin/ngrok
 
 echo "______________________________________________"
+echo "[+]Instando o The Harvester..."
+echo "______________________________________________"
+git clone https://github.com/laramies/theHarvester
+
+echo "______________________________________________"
 echo "[+]Instando o ViSql..."
 echo "______________________________________________"
 sh aptInstallViSql.sh
