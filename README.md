@@ -9,6 +9,9 @@ Ferramentas:
 -Metasploit;
 -Youtube - Downloader;
 -RouterSploit;
+-The Harvester;
+-Wine;
+-Fedora System 25;
 -Server Apache, Php ,Postgresql;
 
 Langs
