@@ -4,6 +4,3 @@ apt install -y apache2 apr apr-util autoconf bison busybox clang coreutils git r
 
 pip install python-nmap sqlmap colorama PyX requests setuptools urllib3 wifi
 pip2 install BeautifulSoup pycparser six urllib3 wifi youtube-dl
-
-#pip install python-nmap sqlmap
-
