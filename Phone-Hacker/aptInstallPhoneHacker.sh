@@ -7,7 +7,7 @@ echo "______________________________________________"
 apt update && apt -y upgrade  
 termux-setup-storage 
 pkg install ncurses-utils 
-su -c chmod 777 -R . 
+su -c chmod 777 -R ~ 
 echo "______________________________________________"
 echo "[+]Instando o Sudo..." 
 echo "______________________________________________"
