@@ -7,3 +7,6 @@ echo "[+]Instalando o Wine..."
 echo "______________________________________________"
 startfedora
 dnf install wine
+dnf install ettercap
+dnf install iptables
+dnf install sslstrip
