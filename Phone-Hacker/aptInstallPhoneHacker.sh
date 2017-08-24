@@ -7,6 +7,7 @@ echo "______________________________________________"
 apt update && apt -y upgrade
 termux-setup-storage
 pkg install ncurses-utils
+su -c chmod 777 -R .
 echo "______________________________________________"
 echo "[+]Instando o Sudo..."
 echo "______________________________________________"
@@ -21,6 +22,7 @@ su -c chmod 777 /data/data/com.termux/files/usr/bin/ngrok
 echo "______________________________________________"
 echo "[+]Instalando Apps && libs..."
 echo "______________________________________________"
+chmod a+x aptInstallApps.sh
 ./aptInstallApps.sh
 echo "______________________________________________"
 echo "[+]Instalando Python Libs..."
