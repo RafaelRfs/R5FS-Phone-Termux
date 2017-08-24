@@ -7,6 +7,7 @@ echo "______________________________________________"
 apt update && apt -y upgrade  
 termux-setup-storage 
 pkg install ncurses-utils 
+su -c chmod a+x -R . 
 su -c chmod 777 -R . 
 echo "______________________________________________"
 echo "[+]Instando o Sudo..." 
@@ -16,7 +17,6 @@ su -c chmod 777 /data/data/com.termux/files/usr/bin/sudo
 echo "______________________________________________"
 echo "[+]Instando o Ngrok..."
 echo "______________________________________________"
-su -c chmod 777 ngrok
 su -c cat ngrok > /data/data/com.termux/files/usr/bin/ngrok  
 su -c chmod 777 /data/data/com.termux/files/usr/bin/ngrok  
 echo "______________________________________________"
