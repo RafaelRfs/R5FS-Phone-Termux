@@ -48,7 +48,7 @@ echo "______________________________________________"
 echo "______________________________________________"
 echo "[+]Instalando Metasploit Tech Z India RAPID7..."
 echo "______________________________________________"
-su -c ./metasploit@Techzindia.sh
+./metasploit@Techzindia.sh
 echo "______________________________________________"
 echo "[+]Configurando o PostgreSQL..."
 echo "______________________________________________"
