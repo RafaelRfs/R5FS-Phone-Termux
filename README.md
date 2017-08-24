@@ -33,9 +33,9 @@ Progrs RFS:
 -Server Php;
 
 Como instalar/ How to Install:
-1 - Copiar todos os arquivos p a pasta Home/ copy all files to home;
-2 - su -c chmod 777 -R ~ ;
-3 - sh aptInstallPhoneHacker.sh ;
+1 => Copiar todos os arquivos p a pasta Home/ copy all files to home;
+2 => su -c chmod 777 -R ~ ;
+3 => sh aptInstallPhoneHacker.sh ;
 
 Montar/Mount Server Php:
 sudo sh startServerPst.sh
