@@ -64,16 +64,33 @@ echo "______________________________________________"
 echo "[+]Instalando o Fedora Linux..."
 echo "______________________________________________"
 ./aptInstalllFedora.sh
+startfedora
+echo "______________________________________________"
+echo "[+]Instalando Libs Fedora..."
+echo "______________________________________________"
+dnf -y install git python-pexpect python-pefile python-crypto pyOpenSSL
 echo "______________________________________________"
 echo "[+]Instalando o Wine..."
 echo "______________________________________________"
-startfedora
 dnf install wine
+echo "______________________________________________"
+echo "[+]Instalando o Ettercap..."
+echo "______________________________________________"
 dnf install ettercap
+echo "______________________________________________"
+echo "[+]Instalando o IpTables..."
+echo "______________________________________________"
 dnf install iptables
+echo "______________________________________________"
+echo "[+]Instalando o SSlStrip..."
+echo "______________________________________________"
 dnf install sslstrip
-
-
+echo "______________________________________________"
+echo "[+]Instalando o Setoolkit..."
+echo "______________________________________________"
+git clone https://github.com/trustedsec/social-engineer-toolkit/ set/
+cd set
+python setup.py install
 echo "##############################################"
 echo "[+]PHONE-HACKER Advanced Success"
 echo "##############################################"
