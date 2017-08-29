@@ -9,6 +9,7 @@ Ferramentas:
 -Metasploit;
 -Youtube - Downloader;
 -RouterSploit;
+-The Harvester;
 -Server Apache, Php ,Postgresql;
 
 Langs
