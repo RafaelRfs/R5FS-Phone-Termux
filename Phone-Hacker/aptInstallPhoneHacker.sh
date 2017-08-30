@@ -20,7 +20,8 @@ su -c chmod 777 /data/data/com.termux/files/usr/bin/ngrok
 echo "______________________________________________"
 echo "[+]Instalando Apps && libs..."
 echo "______________________________________________"
-./aptInstallApps.sh    
+./aptInstallApps.sh
+./aptInstallBin.sh
 echo "______________________________________________"
 echo "[+]Instalando Python Libs..."
 echo "______________________________________________"
