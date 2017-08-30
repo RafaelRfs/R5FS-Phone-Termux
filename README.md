@@ -41,9 +41,9 @@
 * verser;
 
 #### **_Como instalar/ How to Install:_**
-> 1 => copiar todos os arquivos p a pasta Home/ copy all files to home;
-> 2 => su -c chmod 777 -R *;
-> 3 => sh aptInstallPhoneHacker .sh;
+1. => copiar todos os arquivos p a pasta Home/ copy all files to home;
+1. => su -c chmod 777 -R *;
+1. => sh aptInstallPhoneHacker .sh;
 
 #### **_Montar/Mount Server Php:_**
  sudo sh startServerPst .sh
