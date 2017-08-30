@@ -39,10 +39,11 @@ Funcionalidades implementadas no termux/ Novas Chamadas (binários do sistema):
 -network-nmap;
 -rsf;
 -showifi;
+-verser;
 
 Como instalar/ How to Install:
 1 => Copiar todos os arquivos p a pasta Home/ copy all files to home;
-2 => su -c chmod 777 -R ~ ;
+2 => su -c chmod 777 -R * ;
 3 => sh aptInstallPhoneHacker.sh ;
 
 Montar/Mount Server Php:
