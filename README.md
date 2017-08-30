@@ -1,6 +1,5 @@
-Phone Hacker R5FS Termux-Gnuroot...
-
-Ferramentas:
+# ** Phone Hacker R5FS Termux**
+**_Ferramentas_**:
 -Sudo;
 -Ngrok;
 -ViSql;
@@ -12,10 +11,10 @@ Ferramentas:
 -The Harvester;
 -Server Apache, Php ,Postgresql;
 
-Langs
--Python 2 && 3, C,C++,Ruby, Pphp, SQL
+**_Langs_**
+-Python 2 && 3, C,C++,Ruby, Php, SQL
 
-Progrs RFS:
+**_Progrs RFS:_**
 -Client && Server;
 -Admin Finder 2;
 -Bruteforce Form;
@@ -30,7 +29,7 @@ Progrs RFS:
 -Verifiy Services;
 -Server Php;
 
-Funcionalidades implementadas no termux/ Novas Chamadas (binários do sistema):
+**_Funcionalidades implementadas no termux/ Novas Chamadas (binários do sistema):_**
 -Client;
 -Server;
 -mit;
@@ -41,16 +40,16 @@ Funcionalidades implementadas no termux/ Novas Chamadas (binários do sistema):
 -showifi;
 -verser;
 
-Como instalar/ How to Install:
-1 => Copiar todos os arquivos p a pasta Home/ copy all files to home;
-2 => su -c chmod 777 -R ~ ;
-3 => sh aptInstallPhoneHacker.sh ;
+**_Como instalar/ How to Install:_**
+1 => copiar todos os arquivos p a pasta Home/ copy all files to home;
+2 => su -c chmod 777 -R *;
+3 => sh aptInstallPhoneHacker .sh;
 
-Montar/Mount Server Php:
-sudo sh startServerPst.sh
+**_Montar/Mount Server Php:_**
+sudo sh startServerPst .sh
 
-Montar/Mount Server Php:
+**_Montar/Mount Server Php:_**
 sudo php -S ip:port 
 
-Montar/Mount Server Apache:
-httpd ou apachctl 
+**_Montar/Mount Server Apache:**_
+httpd ou apachctl
