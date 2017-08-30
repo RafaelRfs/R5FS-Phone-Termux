@@ -1,4 +1,4 @@
-# ** Phone Hacker R5FS Termux**
+# * Phone Hacker R5FS Termux* #
 **_Ferramentas_**:
 -Sudo;
 -Ngrok;
@@ -51,5 +51,5 @@ sudo sh startServerPst .sh
 **_Montar/Mount Server Php:_**
 sudo php -S ip:port 
 
-**_Montar/Mount Server Apache:**_
+**_Montar/Mount Server Apache:_**
 httpd ou apachctl
