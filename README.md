@@ -39,6 +39,7 @@ Funcionalidades implementadas no termux/ Novas Chamadas (binários do sistema):
 -network-nmap;
 -rsf;
 -showifi;
+-verser;
 
 Como instalar/ How to Install:
 1 => Copiar todos os arquivos p a pasta Home/ copy all files to home;
