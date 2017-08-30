@@ -30,6 +30,16 @@ Progrs RFS:
 -Verifiy Services;
 -Server Php;
 
+Funcionalidades implementadas no termux/ Novas Chamadas (binários do sistema):
+-Client;
+-Server;
+-mit;
+-msfconsole;
+-network [100] [120];
+-network-nmap;
+-rsf;
+-showifi;
+
 Como instalar/ How to Install:
 1 => Copiar todos os arquivos p a pasta Home/ copy all files to home;
 2 => su -c chmod 777 -R ~ ;
