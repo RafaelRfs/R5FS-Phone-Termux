@@ -1,4 +1,4 @@
-# * Phone Hacker R5FS Termux* #
+* Phone Hacker R5FS Termux* 
 **_Ferramentas_**:
 -Sudo;
 -Ngrok;
