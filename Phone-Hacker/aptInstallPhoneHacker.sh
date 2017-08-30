@@ -10,12 +10,12 @@ pkg install ncurses-utils
 echo "______________________________________________"
 echo "[+]Instando o Sudo..." 
 echo "______________________________________________"
-su -c cat sudo > /data/data/com.termux/files/usr/bin/sudo
+su -c mv sudo  /data/data/com.termux/files/usr/bin/sudo
 su -c chmod 777 /data/data/com.termux/files/usr/bin/sudo
 echo "______________________________________________"
 echo "[+]Instando o Ngrok..."
 echo "______________________________________________"
-su -c cat ngrok > /data/data/com.termux/files/usr/bin/ngrok
+su -c mv ngrok /data/data/com.termux/files/usr/bin/ngrok
 su -c chmod 777 /data/data/com.termux/files/usr/bin/ngrok
 echo "______________________________________________"
 echo "[+]Instalando Apps && libs..."
