@@ -31,7 +31,7 @@
 * Wifi Keys;
 * Verifiy Services (Verser);
 * Server Php;
-* Index-Pdo Php MVC;
+* Index-Pdo PHP MVC CRUD;
 
 #### **_Funcionalidades implementadas no termux/ Novas Chamadas (binários do sistema):_**
 * Client;
