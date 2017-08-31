@@ -9,7 +9,10 @@
 * Youtube - Downloader;
 * RouterSploit;
 * The Harvester;
-* Server Apache, Php ,Postgresql;
+* Server Apache;
+* ServerPhp 
+* Server Postgresql;
+* Server Php 7.0 + Pgsql;
 
 #### **_Langs:_**
 -Python 2 && 3, C,C++,Ruby, Php, SQL
@@ -28,6 +31,7 @@
 * Wifi Keys;
 * Verifiy Services (Verser);
 * Server Php;
+* Index-Pdo Php MVC;
 
 #### **_Funcionalidades implementadas no termux/ Novas Chamadas (binários do sistema):_**
 * Client;
