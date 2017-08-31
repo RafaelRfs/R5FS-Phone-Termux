@@ -36,12 +36,13 @@ private function getStr($data){
 	$count = count($indices);
 	$dt['count'] = $count; 
     $num = 0;
-    $str = '';
-	$qst = '';
+    $dt['str'] = '';
+	$dt['qst'] = '';
+    $dt['cmb'] = '';
     foreach($indices as $ind){
 	$dt['str'] .=$ind;
 	$dt['qst'] .='?';
-	$dt['cmb'] .= $dt['str'].'='.$dt['qst'];
+	$dt['cmb'] .= $ind.'=?';
 	if($num+1 < $count){ 
 	$dt['str'] .=','; 
 	$dt['qst'] .=',';
@@ -52,12 +53,17 @@ private function getStr($data){
 	return $dt;
 	}
 		
-private function Prepare($pdo, $data,$dt){
-	for($i = 0; $i < $dt['count']; $i++){
-		$pdo->bindValue($i, $data[$dt['ind'][$i]], PDO::PARAM_STR);
+private function Prepare($pdo, $dta,$dx){
+	$count = $dx['count'];
+	$count2 = count($dta);
+	if($count == $count2){
+      for($i = 0; $i < $count ; $i++){
+		  $v = $i + 1 ;
+	      $pdo->bindValue($v, $dta[$dx['ind'][$i]], PDO::PARAM_STR);
 		}
-	$pdo->execute();
-	}	
+	$pdo->execute();  
+	}
+	}//Private function 	
 	
 public function Create($data){
 	$dt = $this->getStr($data);
@@ -68,7 +74,7 @@ public function Create($data){
 
 public function Read($where = ''){
 	$sql = 'SELECT * FROM '.$this->table;
-	$sql = strip_tags(trim($where == ''))? $sql : $sql.' '.$where;
+	$sql = strip_tags(trim($where == ''))? $sql : $sql.' WHERE '.$where;
 	$pdo = $this->db->query($sql);
 	$pdo->setFetchMode(PDO::FETCH_ASSOC);
 	return $pdo->fetchAll();
@@ -76,8 +82,10 @@ public function Read($where = ''){
 	
 public function Update($id,$data,$camp = 'id'){
 	$dt =  $this->getStr($data);
+	var_dump($dt);
 	$sql = 'UPDATE '.$this->table.' SET '.$dt['cmb'].' WHERE '.$camp.'='.$id;
 	$pdo = $this->db->prepare($sql);
+	echo $sql;
 	$this->Prepare($pdo,$data,$dt);
 	}
 	

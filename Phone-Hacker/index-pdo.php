@@ -35,6 +35,15 @@ include_once('db.php');
 $pdo = new Db();
 $data = $pdo->Read();
 foreach($data as $dt){
-	$txt = '</br>[+]Nome: %s , Senha: %s';
-	printf($txt, $dt['nome'], $dt['senha']);
+	$txt = '</br>[+]%s - Nome: %s , Senha: %s';
+	printf($txt,$dt['id'], $dt['nome'], $dt['senha']);
 	}
+//$pdo->Delete(6);
+
+$dx['nome'] = 'Will';
+$dx['senha'] = '123';
+//$pdo->Create($dx);
+	
+$dx['nome'] = 'Maria';
+$dx['senha'] = '1234';
+///$pdo->Update(6,$dx);
