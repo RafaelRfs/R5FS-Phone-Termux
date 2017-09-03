@@ -1,1 +1,1 @@
-su -c ./techzindiaMetasploit.sh
+su -c ./metasploit@Techzindia.sh
