@@ -1,15 +1,16 @@
+bin_dir=/data/data/com.termux/files/usr/bin/
 echo "[+]Instalando binarios..."
-su -c mv Client  /data/data/com.termux/files/usr/bin/
-su -c mv Server /data/data/com.termux/files/usr/bin/
-su -c mv mit  /data/data/com.termux/files/usr/bin/
-su -c mv msfconsole /data/data/com.termux/files/usr/bin/
-su -c mv network  /data/data/com.termux/files/usr/bin/
-su -c mv network-nmap /data/data/com.termux/files/usr/bin/
-su -c mv rsf /data/data/com.termux/files/usr/bin/
-su -c mv showifi /data/data/com.termux/files/usr/bin/
-su -c mv verser /data/data/com.termux/files/usr/bin/
-su -c mv ShowDb /data/data/com.termux/files/usr/bin/
-su -c mv ShowDbLocal /data/data/com.termux/files/usr/bin/
+su -c mv Client $bin_dir
+su -c mv Server $bin_dir
+su -c mv mit $bin_dir
+su -c mv msfconsole $bin_dir
+su -c mv network $bin_dir
+su -c mv network-nmap $bin_dir
+su -c mv rsf $bin_dir
+su -c mv showifi $bin_dir
+su -c mv verser $bin_dir
+su -c mv ShowDb $bin_dir
+su -c mv ShowDbLocal $bin_dir
 echo "[+]Binary permissions: "
 su -c chmod 777 /data/data/com.termux/files/usr/bin/Client
 su -c chmod 777 /data/data/com.termux/files/usr/bin/Server
