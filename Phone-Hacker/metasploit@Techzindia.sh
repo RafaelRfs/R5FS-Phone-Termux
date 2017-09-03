@@ -1,6 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 echo "##############################################"
 echo " TechZindia, PLZ SUBSCRIBE TechZindia YouTube CHANNEL"
+echo "https://www.youtube.com/channel/UCDBs1lz_JFoTH4tHP8Q6quQ"
 echo "##############################################"
 
 echo "WAIT UNTIL INSTALLING............" 
@@ -24,19 +25,6 @@ gem install bundler
 #Install nokogiri
 echo "nokogiri is installing......"
 gem install nokogiri -- --use-system-libraries
-
-#Install Network-Interface
-
-gem unpack network_interface
-cd network_interface-0.0.1
-sed 's|git ls-files|find -type f|' -i network_interface.gemspec
-curl -L https://wiki.termux.com/images/6/6b/Netifaces.patch -o netifaces.patch
-patch -p1 < netifaces.patch
-gem build network_interface.gemspec
-echo "network_interface is installing........"
-gem install network_interface-0.0.1.gem
-cd ..
-rm -r network_interface-0.0.1
 
 #Install gems
 gem unpack grpc -v 1.4.1
