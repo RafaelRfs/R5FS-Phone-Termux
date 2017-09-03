@@ -1,7 +1,8 @@
-﻿sudo gem install Ascii85 -v 1.0.2
+sudo gem install Ascii85 -v 1.0.2
+sudo gem install actionpack -v 4.2.8
 sudo gem install actionpack -v 4.2.9
-sudo gem install actionview -v 4.2.9
-sudo gem install activesupport -v 4.2.9
+sudo gem install actionview -v 4.2.8
+sudo gem install activesupport -v 4.2.8
 sudo gem install rack -v 1.6
 sudo gem install rack-test -v 0.6.2
 sudo gem install rails-dom-testing -v 1.0
@@ -21,7 +22,9 @@ sudo gem install activesupport -v 4.2.9
 sudo gem install arel -v 6.0
 sudo gem install activesupport -v 4.2.9
 sudo gem install i18n -v 0.7
+sudo gem install i18n -v 0.8.4
 sudo gem install minitest -v 5.1
+sudo gem install minitest -v 5.10.2
 sudo gem install thread_safe -v 0.3
 sudo gem install tzinfo -v 1.1
 sudo gem install addressable -v 2.5.2
@@ -97,7 +100,7 @@ sudo gem install nessus_rest -v 0.1.6
 sudo gem install net-ssh -v 4.1.0
 sudo gem install network_interface -v 0.0.2
 sudo gem install nexpose -v 7.0.0
-sudo gem install nokogiri -v 1.8.0
+sudo gem install nokogiri -v 1.8.0 -- --use-system-libraries
 sudo gem install mini_portile2 -v 2.2.0
 sudo gem install octokit -v 4.7.0
 sudo gem install sawyer -v 0.8.0
@@ -131,7 +134,7 @@ sudo gem install rails-deprecated_sanitizer -v 1.0.3
 sudo gem install activesupport -v 4.2.0.alpha
 sudo gem install rails-dom-testing -v 1.0.8
 sudo gem install activesupport -v 4.2.0.beta
-sudo gem install nokogiri -v 1.6
+sudo gem install nokogiri -v 1.6 -- --use-system-libraries
 sudo gem install rails-deprecated_sanitizer -v 1.0.1
 sudo gem install rails-html-sanitizer -v 1.0.3
 sudo gem install loofah -v 2.0
@@ -147,7 +150,7 @@ sudo gem install ffi
 sudo gem install rbnacl-libsodium -v 1.0.13
 sudo gem install rbnacl -v 3.0.1
 sudo gem install recog -v 2.1.13
-sudo gem install nokogiri
+sudo gem install nokogiri -- --use-system-libraries
 sudo gem install redcarpet -v 3.4.0
 sudo gem install rex-arch -v 0.1.11
 sudo gem install rex-text
