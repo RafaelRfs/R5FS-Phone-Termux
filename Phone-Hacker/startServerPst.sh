@@ -1,1 +1,1 @@
-pg_ctl -D /data/data/com.termux/files/home/pg -l logfile start
+pg_ctl -D pg -l logfile start
