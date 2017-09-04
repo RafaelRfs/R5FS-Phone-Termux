@@ -6,8 +6,10 @@ echo "[+]Configurando o Termux..."
 echo "______________________________________________"
 dir_bin=/data/data/com.termux/files/usr/bin/
 apt update && apt -y upgrade  
+
 termux-setup-storage 
 pkg install ncurses-utils 
+su -c dos2unix *.sh
 su -c chmod 777 *
 sleep 5
 echo "______________________________________________"
