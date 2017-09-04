@@ -47,7 +47,8 @@
 #### **_Como instalar/ How to Install:_**
 1. Copiar todos os arquivos p a pasta Home/ copy all files to home;
 1. su -c chmod 777 -R *;
-1. sh aptInstallPhoneHacker .sh;
+1. su -c dos2unix *.sh;
+1. sh Setup . sh;
 
 #### **_Montar/Mount Server Php:_**
  sudo sh startServerPst .sh
