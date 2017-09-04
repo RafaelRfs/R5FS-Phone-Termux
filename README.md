@@ -43,6 +43,7 @@
 * rsf;
 * showifi;
 * verser;
+* ShowDb ou ShowDbLocal;
 
 #### **_Como instalar/ How to Install:_**
 1. Copiar todos os arquivos p a pasta Home/ copy all files to home;
