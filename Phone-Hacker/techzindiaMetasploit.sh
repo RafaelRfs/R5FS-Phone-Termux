@@ -24,18 +24,18 @@ gem install bundler
 
 #Install nokogiri
 echo "nokogiri is installing......"
-sudo gem install nokogiri -- --use-system-libraries
+gem install nokogiri -- --use-system-libraries
 
 #Install Network-Interface
 
-gem unpack network_interface
+gem unpack network_interface -v 0.0.1
 cd network_interface-0.0.1
 sed 's|git ls-files|find -type f|' -i network_interface.gemspec
 curl -L https://wiki.termux.com/images/6/6b/Netifaces.patch -o netifaces.patch
 patch -p1 < netifaces.patch
-sudo gem build network_interface.gemspec
+gem build network_interface.gemspec
 echo "network_interface is installing........"
-sudo gem install network_interface-0.0.1.gem
+gem install network_interface-0.0.1.gem
 cd ..
 rm -r network_interface-0.0.1
 
