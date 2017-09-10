@@ -1,5 +1,5 @@
 # **Phone Hacker R5FS Termux**
-#### **_Ferramentas:_**
+#### **_Ferramentas/Tools:_**
 * Sudo
 * Ngrok;
 * ViSql;
