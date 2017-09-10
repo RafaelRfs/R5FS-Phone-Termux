@@ -38,13 +38,13 @@ sleep 5
 echo "______________________________________________"
 echo "[+]Instando o Sudo..." 
 echo "______________________________________________"
-su -c mv sudo $dir_bin
+su -c cat sudo > /data/data/com.termux/files/usr/bin/sudo
 su -c chmod 777 /data/data/com.termux/files/usr/bin/sudo
 sleep 5
 echo "______________________________________________"
 echo "[+]Instando o Ngrok..."
 echo "______________________________________________"
-su -c mv ngrok $dir_bin
+su -c cat ngrok > /data/data/com.termux/files/usr/bin/ngrok
 su -c chmod 777 /data/data/com.termux/files/usr/bin/ngrok
 sleep 5
 echo "______________________________________________"
