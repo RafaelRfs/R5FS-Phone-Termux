@@ -1,2 +1,2 @@
 clear
-echo "[+]Phone-Hacker R5FS"
+echo "[+]Welcome "
