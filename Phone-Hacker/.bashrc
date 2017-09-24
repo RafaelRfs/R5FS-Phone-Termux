@@ -1,2 +1,2 @@
 clear
-echo "[+]Welcome "
+echo "[+] PHONE-HACKER MODE ON "
