@@ -2,7 +2,7 @@ echo "##############################################"
 echo " Phone Hacker R5FS ~> Termux/GnuRoot"
 echo "##############################################"
 echo "______________________________________________"
-echo "[+]Configurando o Termux..."
+echo "[+]Setting the Termux..."
 echo "______________________________________________"
 dir_bin=/data/data/com.termux/files/usr/bin/
 apt update && apt -y upgrade  
@@ -18,29 +18,29 @@ echo "______________________________________________"
 ./aptInstallBin.sh
 sleep 5
 echo "______________________________________________"
-echo "[+]Instalando Python Libs..."
+echo "[+]Installing Python Libs..."
 echo "______________________________________________"
 ./aptInstallPythonLibs.sh   
 sleep 5
 echo "______________________________________________"
-echo "[+]Instalando o Scapy..."
+echo "[+]Installing the Scapy..."
 echo "______________________________________________"
 ./aptInstallScapy.sh 
 sleep 5
 echo "______________________________________________"
-echo "[+]Configurando o PostgreSQL..."
+echo "[+]Setting the PostgreSQL && PHP SERVER..."
 echo "______________________________________________"
 ./initPstServer.sh 
 ./startServerPst.sh 
 sleep 5
 echo "______________________________________________"
-echo "[+]Instando o Sudo..." 
+echo "[+]Installing the Sudo..." 
 echo "______________________________________________"
 su -c cat sudo > /data/data/com.termux/files/usr/bin/sudo
 su -c chmod 777 /data/data/com.termux/files/usr/bin/sudo
 sleep 5
 echo "______________________________________________"
-echo "[+]Instando o Ngrok..."
+echo "[+]Installing the Ngrok..."
 echo "______________________________________________"
 su -c cat ngrok > /data/data/com.termux/files/usr/bin/ngrok
 su -c chmod 777 /data/data/com.termux/files/usr/bin/ngrok
