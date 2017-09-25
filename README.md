@@ -49,6 +49,7 @@
 1. Copiar todos os arquivos p a pasta Home/ copy all files to home;
 1. su -c chmod 777 -R *;
 1. su -c dos2unix *.sh;
+1. Install Sudo and Ngrok: copy sudo and ngrok to /data/data/com.termux/files/usr/bin 
 1. sh Setup . sh;
 
 #### **_Montar/Mount Server Php:_**
