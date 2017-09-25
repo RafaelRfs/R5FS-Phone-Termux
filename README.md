@@ -23,7 +23,7 @@
 * Bruteforce Form;
 * Facebook Bruteforce;
 * File Downloader;
-* Man in the Middle ~ MIT;
+* Man in the Middle ~ MITM;
 * Scanner Networks/Ports;
 * ShowDB;
 * Phishing Facebook;
@@ -57,6 +57,9 @@
 
 #### **_Montar/Mount Server Php:_**
  sudo php -S ip:port 
+ 
+#### **_Montar/Mount Server PostgreSql:_**
+pg_ctl -D pg -l logfile start
 
 #### **_Montar/Mount Server Apache:_**
  httpd ou apachctl
