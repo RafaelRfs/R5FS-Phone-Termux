@@ -45,7 +45,8 @@ Como instalar/ How to Install:
 1 => Copiar todos os arquivos p a pasta Home/ copy all files to home;
 2 => su -c chmod 777 -R * ;
 3 => su -c dos2unix *.sh;
-4 => sh Setup.sh ;
+4 => Install Sudo and Ngrok: copy sudo and ngrok to /data/data/com.termux/files/usr/bin;
+5 => sh Setup.sh ;
 
 Montar/Mount Server Php:
 sudo sh startServerPst.sh
