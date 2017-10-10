@@ -28,3 +28,6 @@ echo "[+]Instalando Metasploit Tech Z India RAPID7..."
 echo "______________________________________________"
 ./metasploit@Techzindia.sh
 sleep 5
+echo "[+]Instalando o Wpscan"
+apt install -y gcc git ruby ruby-dev libcurl4-openssl-dev make zlib1g-dev
+git clone https://github.com/wpscanteam/wpscan
