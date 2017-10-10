@@ -17,6 +17,10 @@
 #### **_Langs:_**
 -Python 2 && 3, C,C++,Ruby, Php, SQL
 
+#### **_Systems:_**
+* Kali;
+* Fedora;
+
 #### **_Progrs RFS:_**
 * Client && Server;
 * Admin Finder 2;
