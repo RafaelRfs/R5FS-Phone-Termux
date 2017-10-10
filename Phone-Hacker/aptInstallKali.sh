@@ -1,3 +1,4 @@
 wget https://raw.githubusercontent.com/tchelospy/Kali-Termux-update/master/Kali-Temux-update.sh
-cd Kali-Termux-update 
+dos2unix *.sh
+chmod 777 Kali-Termux-update.sh
 sh Kali-Termux-update.sh 
