@@ -1,4 +1,4 @@
-# **Phone Hacker R5FS Termux**
+# **R5FS_Phone_Termux**
 #### **_Ferramentas/Tools:_**
 * Sudo
 * Ngrok;
@@ -30,7 +30,6 @@
 * Man in the Middle ~ MITM;
 * Scanner Networks/Ports;
 * ShowDB;
-* Phishing Facebook;
 * TcpProxy;
 * Wifi Keys;
 * Verifiy Services (Verser);
