@@ -1,4 +1,4 @@
-# **R5FS_Phone_Termux**
+# **R5FS Phone Termux**
 #### **_Ferramentas/Tools:_**
 * Sudo
 * Ngrok;
