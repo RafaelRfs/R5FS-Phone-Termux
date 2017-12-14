@@ -24,7 +24,6 @@ Progrs RFS:
 -Man in the Middle ~ MIT;
 -Scanner Networks/Ports;
 -ShowDB;
--Phishing Facebook;
 -TcpProxy;
 -Wifi Keys;
 -Verifiy Services;
