@@ -1,0 +1,1 @@
+su -c cat /data/misc/wifi/*.conf
